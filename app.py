@@ -3,8 +3,10 @@ import pandas as pd
 import numpy as np
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 def calculate_tdee(weight, height, age, gender, activity_level):
     """Calculate Total Daily Energy Expenditure (TDEE) based on user input."""
